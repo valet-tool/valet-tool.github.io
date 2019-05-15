@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Hardware Setup | VALET</title>
+        <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/united/bootstrap.min.css" rel="stylesheet" integrity="sha384-WTtvlZJeRyCiKUtbQ88X1x9uHmKi0eHCbQ8irbzqSLkE0DpAZuixT5yFvgX0CjIu" crossorigin="anonymous">
+        <link href="resources/stylesheet.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div>
+            <header>
+                <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+                    <div class="container">
+                        <a class="navbar-brand" href="./">VALET Tool</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="mainNavbar">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./">About the Project</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="./Hardware.html">Hardware Setup <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./Data.html">Data</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./Analysis.html">Analysis</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <div class="container">
+                <h1 class="mt-4 mb-3">Hardware Setup</h1>
+                <section>
+                    <p>We have provided the list of materials, step-by-step instructions, and a setup video on how to create the testing environment.</p>
+                </section>
+
+                <h2 class="mt-4 mb-3">Materials Needed</h2>
+                <section>
+                    <dl class="row">
+                        <dt class="col-3">Item</dt>
+                        <dt class="col-9">Example Product</dt>
+                    </dl>
+                    <dl class="row">
+                        <dt class="col-3">2x Micro SD Cards</dt>
+                        <dd class="col-9"><a href="https://www.amazon.com/SanDisk-Mobile-MicroSDHC-SDSDQM-B35A-Adapter/dp/B004ZIENBA/ref=pd_lpo_vtph_147_lp_img_2?_encoding=UTF8&psc=1&refRID=726670ABJSX5X843M9NB" target="_blank">Amazon</a></dd>
+                    </dl>
+                    <dl class="row">
+                        <dt class="col-3">2x MICRO USB Cables</dt>
+                        <dd class="col-9"><a href="https://www.amazon.com/Mediabridge-USB-2-0-High-Speed-30-004-03B/dp/B00DH101WQ/ref=sr_1_1?keywords=USB+cable+-+USB+A+to+Micro-B+-+3+foot+long&qid=1554815795&s=gateway&sr=8-1" target="_blank">Amazon</a></dd>
+                    </dl>
+                    <dl class="row">
+                        <dt class="col-3">2x USB Power Bricks</dt>
+                        <dd class="col-9"><a href="https://www.amazon.com/ICV-USB-Wall-Charger-Lightweight/dp/B0119BUJDQ/ref=mp_s_a_1_3?crid=3HKIW5S62Q1RY&keywords=5v+2a+usb+charger&qid=1554830415&s=gateway&sprefix=5v+2a+usb+&sr=8-3" target="_blank">Amazon</a></dd>
+                    </dl>
+                    <dl class="row">
+                        <dt class="col-3">2x Raspberry Pi 3B+</dt>
+                        <dd class="col-9"><a href="https://www.amazon.com/ELEMENT-Element14-Raspberry-Pi-Motherboard/dp/B07BDR5PDW/ref=sr_1_1?keywords=Raspberry+Pi+3+-+Model+B%2B+-+1.4GHz+Cortex-A53+with+1GB+RAM&qid=1554815100&s=gateway&sr=8-1" target="_blank">Amazon</a></dt>
+                    </dl>
+                    <dl class="row">
+                        <dt class="col-3">Wires (Female-Female)</dt>
+                        <dd class="col-9"><a href="https://www.amazon.com/Jumper-Wires-Premium-Female-150mm/dp/B00XW2L2X2/ref=sr_1_fkmrnull_4?keywords=Premium+Female%2FFemale+Jumper+Wires+-+20+x+6%22&qid=1554815197&s=gateway&sr=8-4-fkmrnull" target="_blank">Amazon</a></dt>
+                    </dl>
+                    <dl class="row">
+                        <dt class="col-3">INA219 Current Sensor</dt>
+                        <dd class="col-9"><a href="https://www.amazon.com/INA219-High-Current-Sensor-Breakout/dp/B00I827TUQ/ref=sr_1_1?keywords=INA219+High+Side+DC+Current+Sensor+Breakout+-+26V+%C2%B13.2A+Max&qid=1554815143&s=gateway&sr=8-1" target="_blank">Amazon</a></dd>
+                    </dl>
+                </section>
+
+                <h2 class="mt-4 mb-3">Setup Instructions</h2>
+                <section>
+                    <div class="row mb-4">
+                        <div class="col-8">
+                            <h3>Step-by-Step Instructions</h3>
+                                <hr />
+                            <ol type="1">
+                                <li>Prepare a USB cable to be used with our INA219 current sensor
+                                    <ol type="a">
+                                        <li>Remove the exterior coating from the Micro USB cable for about a 1 to 1.5 inch section.</li>
+                                        <li>Remove and trim away at the inner shielding of the cable so that the individual wires are exposed in a clean manner.</li>
+                                        <li>The positive power line in the cable should be indicated with the color red; cut this wire in the middle of the exposed section you are working with from step 1a. Strip a small portion of the red wires away to expose its copper on each side of the severed wire. </li>
+                                        <li>Strip away a small portion of the black wire (GND) to expose copper for our ground wire to be soldered onto. We will tack on a wire to the exposed copper here and plug that into a Raspberry Pi ground pin which will be described further in an upcoming step.</li>
+                                    </ol>
+                                </li>
+                                <li>Connect the INA219 current sensor to our prepared Micro USB cable from Step 1
+                                    <ol type="a">
+                                        <li>Using the red wires we exposed in step 1c and specifically the one coming from the side of the cable our USB type A male connector is on, attach and secure the wire into the terminal block of our INA219’s “Vin+” side.</li>
+                                        <li>Using the red wires we exposed in step 1c and specifically the one coming from the side of the cable our Micro USB male connector is on, attach and secure the wire into the terminal block of our INA219’s “Vin-” side.</li>
+                                    </ol>
+                                </li>
+                                <li>Connect the INA219 sensor to a Raspberry Pi 3b+
+                                    <ol type="a">
+                                        <li>Connect pin 1 (3v3 VCC) to the labeled VCC pin on the INA219 current sensor.</li>
+                                        <li>Connect the I2C serial data line (SDA) on pin 3 on the Raspberry Pi 3B+ to the labeled SDA pin on the INA219 sensor (internal pull-up resistor used).</li>
+                                        <li>Connect the I2C serial clock line (SCL) on pin 3 on the Raspberry Pi 3B+ to the labeled SCL pin on the INA219 sensor (internal pull-up resistor used).</li>
+                                        <li>Connect the ground pin (GND) of the INA219 to pin 9 on the Raspberry Pi 3B+ </li>
+                                        <li>Connect the ground line we tacked on in step 1d to pin 6 on the Raspberry Pi that is connected to the SDA and SCL lines of  the INA219.</li>
+                                    </ol>
+                                </li>
+                                <li>Connect the UART lines between each Raspberry Pi so that they can communicate with each other. (9600 Baud rate)
+                                    <ol type="a">
+                                        <li>Connect pin 8 of one Raspberry PI to pin 10 on the other Raspberry Pi. This will connect our transmit pin (TX) of one Pi to pin 10, the receive pin (RX) of our other Pi.</li>
+                                        <li>Connect pin 10 of one Raspberry PI to pin 8 on the other Pi. This will connect our receive pin (RX) of one Pi to pin 8, the transmit pin (TX) of our other Pi.</li>
+                                        <li>Connect a wire going between each Raspberry Pi’s ground pin. Pin 9 on one Pi connects to pin 9 on the other.</li>                                            
+                                    </ol>
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="col-4">
+                            <h3>Setup Resources</h3>
+                                <hr />
+                            <div class="mt-4">
+                                <img src="./resources/pi3_gpio.png" style="display: block; width: 100%;" />
+                                <small><em>Raspberry Pi GPIO Pin layout</em></small>
+                            </div>
+
+                            <div class="mt-4">
+                                <video width="100%" controls>
+                                    <source src="./resources/SetupVideo.mp4" type="video/mp4">
+                                </video>
+                                <small><em>Video demonstrating hardware setup</em></small>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <footer class="bg-primary">
+                <div class="container">
+                    <p class="text-center text-white">Copyright &copy; 2019</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
