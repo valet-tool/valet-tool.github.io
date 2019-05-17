@@ -9,3 +9,7 @@ footer {
 footer p {
     margin: 0;
 }
+
+dd {
+    margin-bottom: 0;
+}
