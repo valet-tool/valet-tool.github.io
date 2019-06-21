@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Example Usage | VALET</title>
+        <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/cosmo/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+        <link href="resources/stylesheet.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div>
+            <header>
+                <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+                    <div class="container">
+                        <a class="navbar-brand" href="./">VALET Tool</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="mainNavbar">
+                            <ul class="navbar-nav ml-auto">
+                               <!--
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./">About the Project</a>
+                                </li>
+                                -->
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./Videos.html">Demonstration Videos</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./ExampleUsage.html">Usage in Simulations</a>
+                                </li>
+
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="./Hardware.html">Hardware Setup <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./Data.html">Data Usage</a>
+                                </li>
+                                <!-- <li class="nav-item">
+                                    <a class="nav-link" href="./Analysis.html">Analysis</a>
+                                </li> -->
+                                <li class="nav-item"><a class="nav-link" href="./GitHub.html">Project on GitHub</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <div class="container">
+                <h1 class="mt-4 mb-3">Example Usage</h1>
+                <section>
+                    <p>This page will describe basic usage and implementation of the data into self-created and existing simulation tools. While we will describe some basic applications of our VALET data, there are many other existing simulation tools and resources that our data may be integrated into. One example of this is the   <a href="https://www.hpi.uni-potsdam.de/giese/public/selfadapt/exemplars/" target="_blank">Exemplars</a>  resource.</p>               
+
+
+                    <h2>Implementation Into Existing Simulation Tools</h2>
+                    <p></p>
+
+
+                    
+
+                    <h4>DARTSim</h4>
+
+                    <p><a href="https://hub.docker.com/r/gabrielmoreno/dartsim" target="_blank">DARTSim</a> is a new cyber-physical system (sCPS) simulation system that emulates a team of UAVs performing a reconnaissance mission in an unknown hostile environment. The tactic volatility data may be used in DARTSim by replacing the statically defined tactic values. An example of this is shown below:
+
+
+                    <figure>
+                        <img src="images/dartsim.jpg" alt="DartSim Tool Implementation" style="width:100%">
+                        <figcaption>Example of Using Data in DartSim tool.</figcaption>
+                    </figure> 
+
+
+                    <!--
+                    <h4>SWIM</h4>
+                    <p>
+                    <a href="https://www.hpi.uni-potsdam.de/giese/public/selfadapt/exemplars/swim/" target="_blank">SWIM</a> emulates a self-adaptive web hosting service. This tool may be altered to include our dataset by modifying/incorporating cost/latency values into the evaluation process.
+                    </p>
+                    -->
+
+                    <h2>Implementation Into Self-Created Tool</h2>
+                    <p>We created a <a href="https://github.com/valet-tool/ExampleScripts" target="_blank">basic system</a> that includes examples of A) Not accounting for tactic volatility B) Using a small set of volatile tactic data to demonstrate the impact that tactic volatility may have on the determined utility. Implementations of utility equations are likely to be domain specific. Therefore, our intention for this example was to merely create a very basic, example utility equation to demonstrate the future benefits of our work and accounting for tactic volatility. Future work may include the inclusion of a basic machine learning algorithm to predict tactic values in this example.
+
+                    </p>
+
+                    <center>
+                    <figure>
+                        <img src="images/SelfTool-Uitlity.png" alt="Trulli" style="width:30%">
+                        <figcaption>Example Output of Created Tool Using Simple Utility Equation Using Data Produced by VALET.</figcaption>
+                    </figure> 
+                </center>
+
+                    
+
+
+                </section>
+
+                
+
+               
+            </div>
+
+            <footer class="bg-primary">
+                <div class="container">
+                    <p class="text-center text-white">Copyright &copy; 2019</p>
+                    <p class="text-center text-white"><small><em>People and organization names have been temporarily removed while this website's associated paper(s) undergo Double-Blind review.</em></small></p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
