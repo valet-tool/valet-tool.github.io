@@ -2,33 +2,12 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Data | VALET</title>
         <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/cosmo/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>VALET - About the Project</title>
         <link href="resources/stylesheet.css" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-
-        <!-- Start CSV Page formatting -->
-        <style>
-
-        pre {
-            display: block;
-            font-family: monospace;
-            white-space: pre;
-            margin: 1em 0;
-        }
-
-
-
-
-
-        </style>
-        <!-- End CSV Page formatting -->
-
-
-
     </head>
     <body>
         <div>
@@ -55,18 +34,15 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="./ExampleUsage.html">Usage in Simulations</a>
                                 </li>
+
                                 <li class="nav-item">
                                     <a class="nav-link" href="./Hardware.html">Hardware Setup</a>
                                 </li>
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="./Data.html">Data Usage <span class="sr-only">(current)</span></a>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./Data.html">Data Usage</a>
                                 </li>
-                                <!-- <li class="nav-item">
-                                    <a class="nav-link" href="./Analysis.html">Analysis</a>
-                                </li> -->
-                            <!--
+                                <!-- <li class="nav-item"><a class="nav-link" href="./Analysis.html">Analysis</a></li> -->
                                 <li class="nav-item"><a class="nav-link" href="./GitHub.html">Project on GitHub</a></li>
-                            -->
                             </ul>
                         </div>
                     </div>
@@ -74,170 +50,31 @@
             </header>
 
             <div class="container">
-                <h1 class="mt-4 mb-3">Data Adoption Instructions</h1>
-
-
-                <p>This page serves to provide an overview of the data that is created by VALET, along with how it may be easily accessed and used.</p>
-
-
-                <h2>Overview of Data</h2>
-                <!--<p>The data is available is available from our <a href="https://github.com/valet-tool/valet-tool/" target="_blank">GitHub repository</a> in an easy to use .csv format. This file is committed to the repository on a daily basis, and is in the following format: </p>
--->
-
-               <p>Sample data is available  <a href="https://github.com/valet-tool/valet-tool/blob/master/processedfiles/results-2019-06-24.csv" target="_blank">here</a> and is in the following format:</p>
-
-
-<p>
-    <table border = "1">
-        <tr><th>Counter</th><th>Energy Used</th><th>Tactic Start Time/Date</th><th>Server</th><th>Tactic</th></tr>
-        <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td></tr>
-
-
-    </table>
-
-</p>
-
-<br /><br />
-    <p><b>Example CSV Format</b>
-<pre>
-    <code>
-    Counter, TotalPowerConsumed, FirstStartedTimestamp, Latency, Server Number, Tactic Number
-    0, 39822.86, 2019-06-20 22:53:43.199, 22.801, 1, 1
-    1, 48705.58, 2019-06-20 22:54:07.953, 34.047, 1, 2
-    2, 84412.02, 2019-06-20 22:54:43.542, 64.458, 1, 3
-    3, 147439.6, 2019-06-20 22:55:49.735, 90.265, 1, 4
-    4, 11981.2, 2019-06-20 22:57:21.531, 6.469, 1, 5
-    5, 30584.4, 2019-06-20 22:57:29.575, 18.425, 2, 1
-    6, 55011.88, 2019-06-20 22:57:49.851, 32.149, 2, 2
-    7, 75204.36, 2019-06-20 22:58:23.996, 44.004, 2, 3
-    8, 191961, 2019-06-20 22:59:09.336, 109.664, 2, 4
-    9, 18344.48, 2019-06-20 23:01:00.736, 12.264, 2, 5
-    10,94449.74, 2019-06-20 23:01:14.533, 68.467, 3, 1
-    11, 74827.06, 2019-06-20 23:02:24.104, 50.896, 3, 2
-    12, 6725.18, 2019-06-20 23:03:16.374, 3.626, 3, 3
-    13, 148930.32, 2019-06-20 23:03:21.954, 89.046, 3, 4
-</code>
-</pre>
-
-
-
-
-
-<p>
-The columns in the above sample .csv file are described below:
-
-
-<ol>
-    <li><b>Counter: </b>This is a simple incremental counter for each record.</li>
-    <li><b>Total Power Consumed: </b>The amount of energy the tactic used. This is computed by determining the average energy usage for the system during the tactic's execution, and then finding this difference vs. the system's baseline (when the system is not executing any tasks).</li>
-    <li><b>First Started Timestamp: </b>This is the time the tactic started. This is recorded for any time series analysis that the user may want to conduct.</li>
-    <li><b>Latency: </b>The amount of time necessary to complete the tactic.</li>
-
-    <li><b>Server Number: </b> Which of the various servers the file was downloaded from (see below for referenced server)</li>
-    <li><b>Tactic Number: </b>The tactic that was executed (see below for referenced tactic)</li>
-
-
-</ol>
-
-</p>
-
-<h4>Executed tactics</h4>
-<p>
-The following tactic numbers correlate with the tactic operations in the generated .csv output file:
-<ol>
-    <li><b>Download file: </b>VALET first downloads a compressed <i><a href="https://www.libreoffice.org/" target="_blank">LibreOffice</a> tar.gz</i> 224.8MB file that is hosted on servers around the world. It was selected in part due to its existing widespread presence on the Internet. It is also an adequate file size to produce sufficient tactic and cost latency values. VALET downloads this file from nine servers located in countries such as Canada, Korea, Tanzania, Netherlands, Uruguay, Costa Rica, Brazil, Hungary, and Italy. Downloading this file from several locations created a diverse set of real-world tactic latency volatility, which was created by not only the physical distances between the devices, but also the varying network traffic that each operation would encounter as encounters. This emulates the tactic of performing a communication or file transmission operation.</li>
-
-    <li><b>Extract the file's contents: </b>The collected file is then unzipped using the <i>tar -xzf</i> command, with all contents being extracted. This emulates the tactic of performing a simple file i/o operation.</li>
-
-    <li><b>Perform Grep operation: </b>A <a href="https://www.gnu.org/software/grep/manual/grep.html" target="_blank"><i>grep</i></a> operation performs a simple keyword search on the extracted file contents. <a href="https://www.gnu.org/software/grep/manual/grep.html" target="_blank"><i>grep</i></a> was selected since it searches through each of the file within the directory for a specific <a href="https://www.gnu.org/software/grep/manual/grep.html" target="_blank">pattern</a>. This emulated the tactic of performing a simple function or system task.</li>
-
-    <li><b>Compress the file: </b>The file is then re-compressed using the GNU <a href="https://www.gnu.org/software/tar/" target="_blank"><i>tar</i></a> command. This operation provides an additional tactic example of a file i/o operation.</li>
-
-    <li><b>File deletion: </b>At the conclusion of the cycle, the file is deleted so that the process is ready to begin again.</li>
-
-
-
-
-
-</ol>
-
-</p>
-
-
-
-<h4>Server Download Numbers</h4>
-<p>
-The following server numbers correlate with the servers in the generated .csv output file. These servers are accessed to download the <i><a href="https://www.libreoffice.org/" target="_blank">libreoffice</a></i> file that is downloaded, extracted, and analyzed. These servers were selected due to their diversity around the globe. Additional servers will be added as they become unavailable.
-<ol>
-
-    <li>http://tdf.ufes.br</li>
-    <li>http://tdf.mirror.rafal.ca</li>
-    <li>https://espejito.fder.edu.uy</li>
-    <li>https://mirror.aptus.co.tz</li>
-    <li>http://ftp.kaist.ac.kr</li>
-    <li>https://libreoffice.mirror.garr.it</li>
-    <li>http://ftp.bme.hu</li>
-    <li>https://mirrors.ucr.ac.cr</li>
-    <li>https://ftp.nluug.nl</li>
-
-    <!--
-    <li>http://tdf.ufes.br/libreoffice/stable/</li>
-    <li>http://tdf.mirror.rafal.ca/libreoffice/stable/</li>
-    <li>https://espejito.fder.edu.uy/tdf/libreoffice/stable/</li>
-    <li>https://mirror.aptus.co.tz/pub/tdf/libreoffice/stable/</li>
-    <li>http://ftp.kaist.ac.kr/tdf/libreoffice/stable/</li>
-    <li>https://libreoffice.mirror.garr.it/mirrors/tdf/libreoffice/stable/</li>
-    <li>http://ftp.bme.hu/pub/mirrors/tdf/libreoffice/</li>
-    <li>https://mirrors.ucr.ac.cr/tdf/libreoffice/</li>
-    <li>https://ftp.nluug.nl/office/libreoffice/</li>
-
-    -->
-
-</ol>
-</p>
-
-
-
+                <h1 class="mt-4 mb-3">About VALET</h1>
+                <p>
+                    We have created the <strong>V</strong>ol<strong>A</strong>ti<strong>L</strong>ity <strong>E</strong>mula<strong>T</strong>or <em>VALET</em> tool to support research in AI and self-adaptive systems. 
+                    This publicly available tool and generated dataset will enable AI/self-adaptive researchers and developers to perform evaluations using real-world, volatile data. 
+                    Through real-world actions utilizing physical devices, VALET creates robust tactic volatility data in forms of cost and latency volatility. Example data can be viewed <a href="https://github.com/valet-tool/valet-tool/blob/master/processedfiles/results-2019-06-24.csv" target="_blank">here</a>.
 
 
                 </p>
 
-
-
-
-<!--
-
-- Show a CSV snippet of the code
-- Describe what the fields all mean
-
-
-
--->
-
-
-
-
-                <h2>Data Usage Instructions</h2>
-                <p></p>
-
+                <h2 class="mt-3 mb-3">Featured Pages</h2>
+                <ul>
+                    <li><a href="./Videos.html">Demonstration Videos</a> - Videos demonstrating the usage of VALET data in tools.</li>
+                    <li><a href="./Hardware.html">Hardware Setup</a> - Step-by-Step intructions on recreating the VALET process.</li>
+                    <li><a href="./Data.html">Data</a> - Details on our live, regularly generated dataset.
+                    <!--
+                    <li class="nav-item"><a class="nav-link" href="./GitHub.html">Project on GitHub</a></li>
+                    -->
+                </ul>
 
 <!--
-
-- Include in tools
-- Include in R
-
-
-
+                <h2 class="mt-3 mb-3">Demonstration Video</h2>
+                <video width="100%" controls>
+                    <source src="./resources/SetupVideo.mp4" type="video/mp4">
+                </video>
 -->
-
-
-
-
-                <h2>Accessing The Data</h2>
-                <p>The Data is available on our <a href="https://github.com/valet-tool/valet-tool/blob/master/tactic_data.csv">GitHub</a> project page. This file is updated automatically on a nightly basis. Users may also access daily records from this location as well.</p>
-
-                
-
 
             </div>
 
